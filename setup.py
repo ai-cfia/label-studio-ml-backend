@@ -1,7 +1,10 @@
 import setuptools
-import label_studio_ml
 
-print(label_studio_ml.package_name, label_studio_ml.__version__)
+# Hardcoded package info to avoid import issues during build
+PACKAGE_NAME = 'label-studio-ml'
+VERSION = '2.0.1dev0'
+
+print(PACKAGE_NAME, VERSION)
 
 # Readme
 with open("README.md", "r", encoding="utf-8") as f:
@@ -12,8 +15,8 @@ with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
 setuptools.setup(
-    name=label_studio_ml.package_name,
-    version=label_studio_ml.__version__,
+    name=PACKAGE_NAME,
+    version=VERSION,
     author="Heartex",
     author_email="hello@heartex.com",
     description="Label Studio ML backend",

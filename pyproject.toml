@@ -1,0 +1,28 @@
+[project]
+name = "label-studio-ml-backend"
+version = "0.1.0"
+description = "Label Studio ML backend"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "Flask>2.3",
+    "colorama~=0.4",
+    "requests~=2.31",
+    "semver~=3.0.2",
+    "pillow~=10.3",
+    "httpx>=0.28.1",
+    "pydantic>=2.10.6",
+    "lxml>=5.4.0",
+    "appdirs>=1.4.4",
+    "jsonschema>=4.23.0",
+    "xmljson>=0.2.1",
+    "jsf>=0.11.2",
+    "pandas>=2.0.3",
+]
+
+[project.scripts]
+label-studio-ml = "label_studio_ml.server:main"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
