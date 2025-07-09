@@ -5,7 +5,8 @@ import torch
 
 from typing import List, Dict, Optional
 from uuid import uuid4
-from label_studio_ml.model import LabelStudioMLBase, ModelResponse
+from label_studio_ml.model import LabelStudioMLBase
+from label_studio_ml.response import ModelResponse
 from label_studio_sdk._extensions.label_studio_tools.core.utils.io import get_local_path
 from groundingdino.util.inference import load_model, load_image, predict, annotate
 from groundingdino.util import box_ops
